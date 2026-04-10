@@ -35,7 +35,7 @@ while (game)
 
         int result;
 
-        void decideResult(int result, string calculation)
+        void DecideResult(int result, string calculation)
         {
             Console.WriteLine($"What is the result of {calculation}?");
             string? strInput = Console.ReadLine();
