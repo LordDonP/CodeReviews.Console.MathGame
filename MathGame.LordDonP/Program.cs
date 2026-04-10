@@ -11,6 +11,8 @@ while (game)
         int points = 0;
         int operation = 0;
 
+        Random random = new Random();
+
         while(operation < 1 || operation > 6)
         {
             Console.WriteLine("Choose operator:\n");
@@ -57,10 +59,12 @@ while (game)
 
         string calculation = "";
 
-        while (points < 5)
+        bool exitCondition = false;
+
+        while (points < 5 && !exitCondition)
         {
-            int first = new Random().Next(1, 101);
-            int second = new Random().Next(1, 101);
+            int first = random.Next(1, 101);
+            int second = random.Next(1, 101);
             switch (operation)
             {
                 case 1:
@@ -81,8 +85,8 @@ while (game)
                 case 4:
                     while (!(first % second == 0))
                     {
-                        first = new Random().Next(1, 101);
-                        second = new Random().Next(1, 101);
+                        first = random.Next(1, 101);
+                        second = random.Next(1, 101);
                     }
                     calculation = $"{first} / {second}";
                     result = first / second;
@@ -95,14 +99,15 @@ while (game)
                         {
                             Console.WriteLine(item);
                         }
-                        points = 6;
+                        exitCondition = true;
                         break;
                     }
                     else
                     {
                         Console.WriteLine("\nNo game history\n");
+                        exitCondition = true;
+                        break;
                     }
-                    break;
                 case 6:
                     game = false;
                     return;
