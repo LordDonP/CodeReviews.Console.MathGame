@@ -66,17 +66,17 @@ while (game)
                 case 1:
                     calculation = $"{first} + {second}";
                     result = first + second;
-                    decideResult(result, calculation);
+                    DecideResult(result, calculation);
                     break;
                 case 2:
                     calculation = $"{first} - {second}";
                     result = first - second;
-                    decideResult(result, calculation);
+                    DecideResult(result, calculation);
                     break;
                 case 3:
                     calculation = $"{first} * {second}";
                     result = first * second;
-                    decideResult(result, calculation);
+                    DecideResult(result, calculation);
                     break;
                 case 4:
                     while (!(first % second == 0))
@@ -86,7 +86,7 @@ while (game)
                     }
                     calculation = $"{first} / {second}";
                     result = first / second;
-                    decideResult(result, calculation);
+                    DecideResult(result, calculation);
                     break;
                 case 5:
                     if (history.Count != 0)
