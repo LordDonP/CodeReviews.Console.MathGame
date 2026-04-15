@@ -1,7 +1,4 @@
-﻿using System.Drawing;
-using System.Runtime.InteropServices;
-
-List<string> history = new List<string>();
+﻿List<string> history = new List<string>();
 
 bool game = true;
 
